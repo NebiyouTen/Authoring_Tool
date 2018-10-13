@@ -13,7 +13,10 @@ from config import tool_config
 
 objects = []
 h_comp = []
-occlusion_distance = -1 * np.ones((4096,4096))
+"""
+This lookup table contains occlusion distance at every
+"""
+lookupTable = -1 * np.ones((4096,4096))
 blank_image  = np.zeros((3,4096,4096))
 PI = math.pi
 
