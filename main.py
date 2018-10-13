@@ -78,10 +78,12 @@ def project(left_cor,right_cor):
         # break
     return None
     #project h
-
-def check_occlusion(params):
-    return None
-    #return True or False
+   
+def check_occlusion(x, y, occlusiondist):
+    if lookupTable[x, y] < occlusiondist:
+        lookupTable[x, y] = occlusiondist
+        return True
+    return False
 
 
 def main(argv):
