@@ -24,7 +24,7 @@ def __init__():
         picture_cfg = tool_config["objects"]["picture"]
         image_name = picture_cfg["name"]
         t = picture_cfg["center"]
-        edge_length_row, edge_length_col = picture_cfg["size"]
+        edge_length_col = picture_cfg["col-edge-length"]
         TBA = picture_cfg["tait-bryan-angles"]
 
         object1 = VRpicture.VRpicture(TBA, t, image_name, edge_length_col)
@@ -32,22 +32,20 @@ def __init__():
     
         # Init VR Cube 
         cube_cfg = tool_config["objects"]["cube"]
-        cube_name = cube_cfg["name"]
+        cube_square_image_names = cube_cfg["square-image-names"]
         t = cube_cfg["center"]
-        edge_length_row, edge_length_col = cube_cfg["size"]
         TBA = cube_cfg["tait-bryan-angles"]
-        length = cube_cfg["length"]
+        edge_length = cube_cfg["edge-length"]
      
-        objects2 = None
-        objects.append(objects2)
+        object2 = None
+        objects.append(object2)
 
         # Init VR Sphere
-        sphere_cfg = tool_config["objects"]["cube"]
+        sphere_cfg = tool_config["objects"]["sphere"]
         sphere_name = sphere_cfg["name"]
         t = sphere_cfg["center"]
         TBA = sphere_cfg["tait-bryan-angles"]
         radius = sphere_cfg["radius"]
-        sphere_cfg = sphere_cfg["objects"]["sphere"]
 
         objects3 = None
         objects.append(objects3)

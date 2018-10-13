@@ -5,22 +5,21 @@ tool_config = {
             "name": "",  
             "center": (0, 0),                   # Its center in the World coordinates
 			"radius": 10, 				        # in units of focal length
-			"size": (128, 128),			        # in pixels
             "location": (23, 65), 			    # in pixels
             "tait-bryan-angles": [0, 30, 69] 	# in degrees
 		}, 
-        "cube":  {
-            "name": "",  
+        "cube": {
+            # You have to put the name of all 6 images that form a cube
+            "square-image-names": ["image_name_1", "image_name_2", "image_name_3", "image_name_4", "image_name_5", "image_name_6"],  
             "center": (0, 0),                   # Its center in the World coordinates
-			"length": 10, 				        # in units of focal length
-			"size": (460, 460),			        # in pixels
+			"edge-length": 10, 				    # in units of focal length
             "location": (100, 65), 			    # in pixels
             "tait-bryan-angles": [30, 15, 50] 	# in degrees
 		}, 
         "picture":  {   
             "name": "pit_at_pole",            
 			"center": (50, 50), 				# Its center in the World coordinates
-			"size": (240, 240),			        # in pixels
+			"col-edge-length": (240, 240),	    # in units of focal length
             "location": (100, 65), 			    # in pixels
             "tait-bryan-angles": [30, 15, 50] 	# in degrees
 		}, 
