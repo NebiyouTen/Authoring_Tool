@@ -8,6 +8,9 @@ import VRpicture
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 
+from config import tool_config
+
+
 objects = []
 h_comp = []
 occlusion_distance = -1 * np.ones((4096,4096))
@@ -91,5 +94,42 @@ def main(argv):
 
     bmp_io_c.output_bmp_c('outputimage.bmp',cics_to_pics(blank_image))
 
+
+
+def __init__():
+        image_width, image_height = tool_config["out_image_size"]
+        occlusion_distance = -1 * np.ones((image_width, image_height)) 
+
+        # Init VR Picture
+        picture_cfg = tool_config["objects"]["picture"]
+        image_name = picture_cfg["name"]
+        t = picture_cfg["center"]
+        edge_length_col = picture_cfg["col-edge-length"]
+        TBA = picture_cfg["tait-bryan-angles"]
+
+        object1 = VRpicture.VRpicture(TBA, t, image_name, edge_length_col)
+        objects.append(object1)
+    
+        # Init VR Cube 
+        cube_cfg = tool_config["objects"]["cube"]
+        cube_square_image_names = cube_cfg["square-image-names"]
+        t = cube_cfg["center"]
+        TBA = cube_cfg["tait-bryan-angles"]
+        edge_length = cube_cfg["edge-length"]
+     
+        object2 = None
+        objects.append(object2)
+
+        # Init VR Sphere
+        sphere_cfg = tool_config["objects"]["sphere"]
+        sphere_name = sphere_cfg["name"]
+        t = sphere_cfg["center"]
+        TBA = sphere_cfg["tait-bryan-angles"]
+        radius = sphere_cfg["radius"]
+
+        objects3 = None
+        objects.append(objects3)
+
+
 if __name__ == '__main__':
-    main(sys.argv)
+        main(sys.argv)
