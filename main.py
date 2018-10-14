@@ -40,8 +40,16 @@ def __init__():
     # init will be done here
 
 def compute_h_comp(params):
-    return None
-    #compute h
+    
+    #converting from body to world coordinates
+    h_bw = h_builders.wb_build(TBA,t)
+    
+    #converting from the world to camera cooerdinates 
+    h_wc = h_builders.wb_build((0,0,0),(-0.25, 0, 0))
+
+    h_comp = h_wc.dot(h_bw) 
+    
+    return h_comp
 
 def project(left_cor,right_cor):
     for i in range(len(left_cor)):
