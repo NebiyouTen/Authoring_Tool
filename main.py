@@ -4,6 +4,7 @@ import os
 import numpy as np
 import bmp_io_c
 import math
+import h_builders
 import VRpicture
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
@@ -29,9 +30,17 @@ image_right = np.zeros((3,2048,4096))
 PI = math.pi
 
 def compute_h_comp(params):
-    return None
-    #compute h
-
+    
+    #converting from body to world coordinates
+    h_bw = h_builders.wb_build(TBA,t)
+    
+    #converting from the world to camera cooerdinates 
+    h_wc = h_builders.wb_build((0,0,0),(-0.25, 0, 0))
+    
+    #composite hmatrix
+    h_comp = h_wc.dot(h_bw) 
+    
+    return h_comp
 
    
 def check_occlusion(x, y, occlusiondist):
