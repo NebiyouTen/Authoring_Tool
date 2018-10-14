@@ -15,6 +15,13 @@ objects = []
 h_comp = []
 occlusion_distance = -1 * np.ones((4096,4096))
 # blank_image  = np.zeros((3,4096,4096))
+"""
+This lookup table contains occlusion distance at every
+"""
+lookupTable = -1 * np.ones((4096,4096))
+blank_image  = np.zeros((3,4096,4096))
+PI = math.pi
+
 
 image_left = np.zeros((3,2048,4096))
 image_right = np.zeros((3,2048,4096))
@@ -25,9 +32,13 @@ def compute_h_comp(params):
     return None
     #compute h
 
-def check_occlusion(params):
-    return True
-    #return True or False
+
+   
+def check_occlusion(x, y, occlusiondist):
+    if lookupTable[x, y] < occlusiondist:
+        lookupTable[x, y] = occlusiondist
+        return True
+    return False
 
 def __init__():
         image_width, image_height = tool_config["out_image_size"]
