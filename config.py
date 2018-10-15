@@ -16,10 +16,25 @@ tool_config = {
             "tait-bryan-angles": [30, 15, 50] 	# in degrees
 		},
         "picture":  {
-            "name": "VRPicture.bmp",
-			"center": (600, 50), 				# Its center in the World coordinates
-			"col-edge-length": 240,	            # in units of focal length
-            "tait-bryan-angles": [30, 15, 50] 	# in degrees
+            "name": "beachball_5.bmp",
+			"center": (0, 2,2), 				# Its center in the World coordinates
+			"col-edge-length": 3,	            # in units of focal length
+            "tait-bryan-angles": [0, 0, 45] 	# in degrees
+		},
+
+		"red_square":  {
+            "name": "image_test02.bmp",
+			"center": (0, 3 ,3), 				# Its center in the World coordinates
+			"col-edge-length": 5,	            # in units of focal length
+            "tait-bryan-angles": [0, 0, -70] 	# in degrees
+		},
+
+		"red_square2":  {
+            "name": "image_test01.bmp",
+			"center": (0, 0 ,1), 				# Its center in the World coordinates
+			"col-edge-length": 1,	            # in units of focal length
+            "tait-bryan-angles": [0, -15, 0] 	# in degrees
+
 		},
     }
 }
