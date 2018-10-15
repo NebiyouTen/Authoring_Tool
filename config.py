@@ -34,6 +34,7 @@ tool_config = {
 			"center": (0, 0 ,1), 				# Its center in the World coordinates
 			"col-edge-length": 1,	            # in units of focal length
             "tait-bryan-angles": [0, -15, 0] 	# in degrees
+
 		},
     }
 }
