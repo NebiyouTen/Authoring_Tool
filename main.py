@@ -32,15 +32,18 @@ PI = math.pi
 def compute_h_comp(params):
     
     #converting from body to world coordinates
-    h_bw = h_builders.wb_build(TBA,t)
+    #h_bw = h_builders.wb_build(TBA,t)
     
-    #converting from the world to camera cooerdinates 
-    h_wc = h_builders.wb_build((0,0,0),(-0.25, 0, 0))
+    #converting from the world to left  camera coordinates 
+    h_wcl = h_builders.wb_build((0,0,0),(-0.25, 0, 0))
+    
+    #converting from the world to left  camera coordinates 
+    h_wcr = h_builders.wb_build((0,0,0),(0.25, 0, 0))
     
     #composite hmatrix
-    h_comp = h_wc.dot(h_bw) 
+    #h_comp = h_wc.dot(h_bw) 
     
-    return h_comp
+    return h_wcl, h_wcr
 
    
 def check_occlusion(x, y, occlusiondist):
