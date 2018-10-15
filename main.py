@@ -143,9 +143,7 @@ def main(argv):
 
     print("Image processing is done. Now Writing image to file ")
     blank_image = np.concatenate((image_left,image_right),1)
-    out_img = blank_image
-
-    bmp_io_c.output_bmp_c('outputimage_setr.bmp',(out_img))
+    bmp_io_c.output_bmp_c('output_sterio_pair.bmp',(blank_image))
 
 if __name__ == '__main__':
         main(sys.argv)
