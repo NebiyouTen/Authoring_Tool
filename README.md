@@ -26,4 +26,5 @@ a picture, a cube and a sphere. Please note that, all the images should be in bm
           "name": "VRPicture.bmp",            # Name of the picture
           "center": (600, 50), 				        # Its center in the World coordinates
           "col-edge-length": 240,	            # in units of focal length
-          "tait-bryan-angles": [30, 15, 50] 	# in degrees ```
+          "tait-bryan-angles": [30, 15, 50] 	# in degrees 
+```

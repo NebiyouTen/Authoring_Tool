@@ -3,7 +3,7 @@ tool_config = {
 	"objects": {
 		"sphere":  {
             "name": "VRSphere.bmp",  
-            "center": (40, 60),                   # Its center in the World coordinates
+            "center": (40, 60),                 # Its center in the World coordinates
 			"radius": 10, 				        # in units of focal length
             "tait-bryan-angles": [0, 30, 69] 	# in degrees
 		}, 
@@ -11,7 +11,7 @@ tool_config = {
             # You have to put the name of all 6 images that form a cube
             "square-image-names": ["image_name_1.bmp", "image_name_2.bmp", "image_name_3.bmp", \
                                     "image_name_4.bmp", "image_name_5.bmp", "image_name_6.bmp"],  
-            "center": (250, 350),                   # Its center in the World coordinates
+            "center": (250, 350),               # Its center in the World coordinates
 			"edge-length": 10, 				    # in units of focal length
             "tait-bryan-angles": [30, 15, 50] 	# in degrees
 		}, 
