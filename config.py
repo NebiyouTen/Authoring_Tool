@@ -7,14 +7,14 @@ tool_config = {
 			"radius": 0.7, 				        # in units of focal length
             "tait-bryan-angles": [90, 0, 0] 	# in degrees
 		},
-        # "cube": {
-        #     # You have to put the name of all 6 images that form a cube
-        #     "square-image-names": ["image1.bmp", "image2.bmp", "image3.bmp", \
-        #                             "image4.bmp", "image5.bmp", "image6.bmp"],
-        #     "center": (0, 0,2),                   # Its center in the World coordinates
-		# 	"edge-length": 1, 				    # in units of focal length
-        #     "tait-bryan-angles": [35, 75, 13] 	# in degrees
-		# },
+        "cube": {
+            # You have to put the name of all 6 images that form a cube
+            "square-image-names": ["image1.bmp", "image2.bmp", "image3.bmp", \
+                                    "image4.bmp", "image5.bmp", "image6.bmp"],
+            "center": (0, 0,2),                   # Its center in the World coordinates
+			"edge-length": 1, 				    # in units of focal length
+            "tait-bryan-angles": [35, 75, 13] 	# in degrees
+		},
 		"cube1": {
             # You have to put the name of all 6 images that form a cube
             "square-image-names": ["image1.bmp", "image2.bmp", "image3.bmp", \

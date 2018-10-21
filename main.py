@@ -104,7 +104,37 @@ def __init__():
         # objects.append(object1)
 
         # Init VR Cube
+        cube_cfg = tool_config["objects"]["cube"]
+        cube_square_image_names = cube_cfg["square-image-names"]
+        t = cube_cfg["center"]
+        TBA = cube_cfg["tait-bryan-angles"]
+        edge_length = cube_cfg["edge-length"]
+        # Init VR Sphere
+
+        object2 = C.VRCube(TBA,t,cube_square_image_names,edge_length)
+        objects.append(object2)
+
         cube_cfg = tool_config["objects"]["cube1"]
+        cube_square_image_names = cube_cfg["square-image-names"]
+        t = cube_cfg["center"]
+        TBA = cube_cfg["tait-bryan-angles"]
+        edge_length = cube_cfg["edge-length"]
+        # Init VR Sphere
+
+        object2 = C.VRCube(TBA,t,cube_square_image_names,edge_length)
+        objects.append(object2)
+
+        cube_cfg = tool_config["objects"]["cube2"]
+        cube_square_image_names = cube_cfg["square-image-names"]
+        t = cube_cfg["center"]
+        TBA = cube_cfg["tait-bryan-angles"]
+        edge_length = cube_cfg["edge-length"]
+        # Init VR Sphere
+
+        object2 = C.VRCube(TBA,t,cube_square_image_names,edge_length)
+        objects.append(object2)
+
+        cube_cfg = tool_config["objects"]["cube3"]
         cube_square_image_names = cube_cfg["square-image-names"]
         t = cube_cfg["center"]
         TBA = cube_cfg["tait-bryan-angles"]
